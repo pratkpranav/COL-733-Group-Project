@@ -83,7 +83,7 @@ server.listen(port, function () {
 // - setup shutdown hooks
 var shutdown_hook = function () {
     console.log('Quitting redis client');
-    redisclient.quit();
+    client.quit();
     console.log('Shutting down app');
     process.exit();
 };
